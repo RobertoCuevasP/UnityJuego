@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275929219}
   - component: {fileID: 275929220}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 322488661}
   - component: {fileID: 322488663}
   - component: {fileID: 322488664}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Conejo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,8 +258,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437936791
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4096952503790119513, guid: f39255f0e78e3a146b1dddebdbd6f3ca,
     type: 3}
@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353360023}
   - component: {fileID: 353360024}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150905670}
   - component: {fileID: 1150905671}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152462807}
   - component: {fileID: 1152462808}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960025967}
   - component: {fileID: 1960025968}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,13 +740,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089765529}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Escenario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2089765529
 Transform:
   m_ObjectHideFlags: 0
