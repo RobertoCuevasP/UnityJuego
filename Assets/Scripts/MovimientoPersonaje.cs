@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 0.00005f;
     public Vector2 direccion;
     private Vector2 movimiento;
     private Animator animator;
