@@ -491,6 +491,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4560626, y: 1.0160075}
   m_EdgeRadius: 0
+--- !u!1 &121118977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121118978}
+  m_Layer: 9
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121118978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121118977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 322488662}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135669405
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +604,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.73, y: -3.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: [{fileID: 487695655}]
+  m_Children:
+  - {fileID: 487695655}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -611,6 +642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direccion: {x: 0, y: 0}
+  direccionX: 0
+  direccionY: 0
 --- !u!61 &135669410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1042,6 +1075,7 @@ GameObject:
   - component: {fileID: 322488664}
   - component: {fileID: 322488665}
   - component: {fileID: 322488666}
+  - component: {fileID: 322488667}
   m_Layer: 9
   m_Name: Conejo
   m_TagString: Untagged
@@ -1110,7 +1144,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.15, y: 3.534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children: [{fileID: 121118978}]
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1128,6 +1162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direccion: {x: 0, y: 0}
+  direccionX: 0
+  direccionY: 0
 --- !u!95 &322488664
 Animator:
   serializedVersion: 3
@@ -1194,6 +1230,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30439043, y: 0.27110553}
   m_EdgeRadius: 0
+--- !u!114 &322488667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322488660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d66fc6e5071e754cad2b90f0b5ff6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balaPrefab: {fileID: 704415051991072130, guid: e6c8372dda9b95e48ab8b32001d0bcd7,
+    type: 3}
+  shooter: {fileID: 322488660}
 --- !u!1 &336934846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2608,7 @@ GameObject:
   - component: {fileID: 1066514261}
   - component: {fileID: 1066514263}
   - component: {fileID: 1066514262}
+  - component: {fileID: 1066514264}
   m_Layer: 9
   m_Name: Oso
   m_TagString: Untagged
@@ -2625,7 +2677,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.121, y: 3.454, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children: [{fileID: 1959461888}]
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2662,6 +2714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direccion: {x: 0, y: 0}
+  direccionX: 0
+  direccionY: 0
 --- !u!61 &1066514262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2709,6 +2763,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1066514264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066514257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d66fc6e5071e754cad2b90f0b5ff6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balaPrefab: {fileID: 704415051991072130, guid: e6c8372dda9b95e48ab8b32001d0bcd7,
+    type: 3}
+  shooter: {fileID: 1066514257}
 --- !u!1 &1088061722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,6 +3603,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1257620353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257620354}
+  m_Layer: 9
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257620354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257620353}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1413890218}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275300123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3785,7 @@ GameObject:
   - component: {fileID: 1413890220}
   - component: {fileID: 1413890221}
   - component: {fileID: 1413890222}
+  - component: {fileID: 1413890223}
   m_Layer: 9
   m_Name: Zorro
   m_TagString: Untagged
@@ -3754,7 +3854,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.16, y: -3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children: [{fileID: 1257620354}]
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3791,6 +3891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direccion: {x: 0, y: 0}
+  direccionX: 0
+  direccionY: 0
 --- !u!50 &1413890221
 Rigidbody2D:
   serializedVersion: 4
@@ -3838,6 +3940,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34812498, y: 0.26761532}
   m_EdgeRadius: 0
+--- !u!114 &1413890223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413890216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d66fc6e5071e754cad2b90f0b5ff6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balaPrefab: {fileID: 704415051991072130, guid: e6c8372dda9b95e48ab8b32001d0bcd7,
+    type: 3}
+  shooter: {fileID: 1413890216}
 --- !u!1 &1445441821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,6 +4418,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8703259, y: 0.9435506}
   m_EdgeRadius: 0
+--- !u!1 &1959461887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959461888}
+  m_Layer: 9
+  m_Name: Firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959461888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959461887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1066514259}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960025966
 GameObject:
   m_ObjectHideFlags: 0
