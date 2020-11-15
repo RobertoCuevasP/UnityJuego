@@ -13,11 +13,9 @@ public class MovimientoPersonaje : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Animator animator;
     private bool camino;
-    private int direccionX;
-    private int direccionY;
-
-
-    // Start is called before the first frame update
+    public int direccionX;
+    public int direccionY;
+    
 
     void Awake()
     {
