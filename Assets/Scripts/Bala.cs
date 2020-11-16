@@ -33,19 +33,21 @@ public class Bala : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.CompareTag("Player"))
-        {
-            //UnityEngine.Debug.Log("Encontré un Player");
+        if(!collision.CompareTag("Mapa")){
 
-            collision.SendMessageUpwards("CambiarVida", damage * (-1)); //Busca el método del objeto que chocó
-        }
-        else if (collision.CompareTag("Enemigo"))
-        {
+            if (collision.CompareTag("Player"))
+            {
+                //UnityEngine.Debug.Log("Encontré un Player");
+
+                collision.SendMessageUpwards("AddDamage", (1)); //Busca el método del objeto que chocó
+            }
+        /*else if (collision.CompareTag("Enemigo"))
+            {
             collision.SendMessageUpwards("QuitarVida", damage);
+            }
+            */
+            Destroy(this.gameObject);
         }
-        */
-        Destroy(this.gameObject);
-        
 
     }
 
