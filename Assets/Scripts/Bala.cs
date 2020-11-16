@@ -6,22 +6,49 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
 
+    //public int damage = 10;
     public float speed = 2f;
     public Vector2 direccion;
+    public float tiempoVida = 3f;
+    private Rigidbody2D rigidbody;
 
-    public float tiempoVIda = 4f;
-    
-    // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, tiempoVIda);
+        Destroy(this.gameObject, tiempoVida);
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        Vector2 movimiento = direccion.normalized * speed * Time.deltaTime;
 
-        transform.Translate(movimiento);
+
     }
+
+    private void FixedUpdate()
+    {
+        Vector2 movement = direccion.normalized * speed;
+        rigidbody.velocity = movement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        /*if (collision.CompareTag("Player"))
+        {
+            //UnityEngine.Debug.Log("Encontré un Player");
+
+            collision.SendMessageUpwards("CambiarVida", damage * (-1)); //Busca el método del objeto que chocó
+        }
+        else if (collision.CompareTag("Enemigo"))
+        {
+            collision.SendMessageUpwards("QuitarVida", damage);
+        }
+        */
+        Destroy(this.gameObject);
+        
+
+    }
+
 }
+
+
