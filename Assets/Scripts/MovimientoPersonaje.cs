@@ -29,8 +29,6 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     
 
     void Update()

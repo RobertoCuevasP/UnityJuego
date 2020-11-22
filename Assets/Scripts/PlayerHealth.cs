@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+   public Animator animator;
+   public Rigidbody2D rigidbody;
+   public Collider2D collider;
+    
    public int totalHealth = 3;
    public RectTransform heartUI;
 
@@ -15,8 +19,11 @@ public class PlayerHealth : MonoBehaviour
 
    private void Awake()
    {
-   	_renderer = GetComponent<SpriteRenderer>();
-   }
+        _renderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
+    }
    void Start()
    {
    	health = totalHealth;
@@ -29,8 +36,14 @@ public class PlayerHealth : MonoBehaviour
    		StartCoroutine("VisualFeedback");
    		//Game over
    		if (health <= 0){
-   		health = 0;
-   		}
+   		    health = 0;
+            animator.SetTrigger("Muerte");
+            Destroy(GetComponent<MovimientoPersonaje>());
+            Destroy(GetComponent<Arma>());
+            gameObject.layer = 11;
+            rigidbody.velocity = new Vector2(0, 1);
+            Destroy(this.gameObject, 10f);
+        }
 
    		heartUI.sizeDelta = new Vector2(heartSize * health, heartSize);
 
